@@ -16,6 +16,6 @@ function henon(num,a,b)                     # e.g.henon(1e6,1.4,0.3)
     (figure)
 end
 
-henon(1e7,1.4,0.3)
+henon(1e6,1.4,0.3)
 
 
