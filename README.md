@@ -1,4 +1,4 @@
 # Henon
-Calculate and display the "Henon" map / attractor
+Calculate and display the "Hénon" map / attractor
 
 The map was introduced by Michel Hénon as a simplified model of the Poincaré section of the Lorenz model.
