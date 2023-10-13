@@ -7,6 +7,7 @@ function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)
     u, v = Float64[], Float64[]               # point vectors (x,y)
     markerstyle = "."
     markersize = 0.0001
+    color = "red"
 
     for i = 1:num
         push!(u, x)
@@ -19,7 +20,7 @@ function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)
 
     figure = PyPlot.gcf()
     figure.set_size_inches(12, 8)
-    scatter(u, v, s=markersize, marker=markerstyle, c="red")
+    scatter(u, v, s=markersize, marker=markerstyle, c=color)
     (figure)
 end
 
