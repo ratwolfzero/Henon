@@ -1,5 +1,5 @@
 using PyPlot;
-pygui(false);                                 # pygui: open plot in seperate interactive window if true
+pygui(true);                                  # pygui: open plot in seperate interactive window if true
 
 function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)     
 
@@ -21,7 +21,7 @@ function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)
     figure = PyPlot.gcf()
     figure.set_size_inches(12, 8)
     scatter(u, v, s=markersize, marker=markerstyle, c=color)
-    (figure)
+    #figure #use figure if pygui=false                                
 end
 
 henon(1e6, 1.4, 0.3)
