@@ -1,13 +1,13 @@
 using PyPlot;
-pygui(false);                                 # pygui open plot in seperate interactive window if true
+pygui(false);                                 # pygui: open plot in seperate interactive window if true
 
 function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)     
 
     x, y = Float64(0), Float64(0)             # origin point
     u, v = Float64[], Float64[]               # point vectors (x,y)
-    markerstyle = "."
-    markersize = 0.0001
-    color = "red"
+    markerstyle = "."                         # scatter plot marker style
+    markersize = 0.0001                       # scatter plot marker size
+    color = "red"                             # scatter plot color
 
     for i = 1:num
         push!(u, x)
