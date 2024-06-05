@@ -18,7 +18,9 @@ function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)
 
     figure = PyPlot.gcf()
     figure.set_size_inches(12, 8)
+    #scatter(u, v, s=markersize, marker=markerstyle, c=color)
     scatter(u, v, s=markersize, marker=markerstyle, c=color)
+    
     #figure #use figure if pygui=false                                
 end
 
