@@ -12,10 +12,8 @@ function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)
     for i = 1:num
         push!(u, x)
         push!(v, y)
-        xx = 1 - a * x^2 + y
-        yy = b * x
-        x = xx
-        y = yy
+        xx, yy = 1 - a * x^2 + y, b * x
+        x, y = xx, yy
     end
 
     figure = PyPlot.gcf()
