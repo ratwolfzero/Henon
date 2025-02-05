@@ -12,7 +12,7 @@ function henon(num, a, b)
     end
 
     fig, ax = subplots(figsize=(12, 8))  # Explicit figure creation
-    scatter(u, v, s=0.0001, marker=".", c="red")
+    plot(u, v, ".", markersize=0.01, color="red")  # Much faster than scatter
 end
 
 henon(1_000_000, 1.4, 0.3)
