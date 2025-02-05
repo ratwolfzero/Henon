@@ -1,29 +1,21 @@
-using PyPlot;
-pygui(true);                                  # pygui: open plot in seperate interactive window if true
+using PyPlot
+pygui(true)  # Open plot in a separate interactive window
 
-function henon(num, a, b)                     # e.g.henon(1e6,1.4,0.3)     
+function henon(num, a, b)  
+    x, y = 0.0, 0.0  # Origin point
+    u = Vector{Float64}(undef, num)  # Preallocate x-coordinates
+    v = Vector{Float64}(undef, num)  # Preallocate y-coordinates
 
-    x, y = Float64(0), Float64(0)             # origin point
-    u, v = Float64[], Float64[]               # point vectors (x,y)
-    markerstyle = "."                         # scatter plot marker style
-    markersize = 0.0001                       # scatter plot marker size
-    color = "red"                             # scatter plot color
-
-    for i = 1:num
-        push!(u, x)
-        push!(v, y)
-        xx, yy = 1 - a * x^2 + y, b * x
-        x, y = xx, yy
+    for i in 1:num
+        u[i], v[i] = x, y
+        x, y = 1 - a * x^2 + y, b * x  # Tuple unpacking for efficiency
     end
 
     figure = PyPlot.gcf()
     figure.set_size_inches(12, 8)
-    #scatter(u, v, s=markersize, marker=markerstyle, c=color)
-    scatter(u, v, s=markersize, marker=markerstyle, c=color)
-    
-    #figure #use figure if pygui=false                                
+    scatter(u, v, s=0.0001, marker=".", c="red")  # Plot points
 end
 
-henon(1e6, 1.4, 0.3)
+henon(1_000_000, 1.4, 0.3)
 
 
