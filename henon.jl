@@ -16,5 +16,3 @@ function henon(num, a, b)
 end
 
 henon(1_000_000, 1.4, 0.3)
-
-
